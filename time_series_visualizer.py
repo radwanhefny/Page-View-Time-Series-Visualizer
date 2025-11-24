@@ -6,7 +6,7 @@ import seaborn as sns
 import os
 
 # Import data (Make sure to parse dates. Consider setting index column to 'date'.)
-path = os.path.join(os.getcwd(), 'data/fcc-forum-pageviews.csv')
+path = os.path.join(os.path.dirname(__file__), 'data', 'fcc-forum-pageviews.csv')
 df = pd.read_csv(path, parse_dates=['date'], index_col='date')
 
 # Clean data
