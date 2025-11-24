@@ -1,31 +1,28 @@
-# Page-View-Time-Series-Visualizer
- Analyze and visualize web page view trends over time using Python and Matplotlib, highlighting patterns, anomalies, and seasonal variations.
-# 📊 Mean-Variance-Standard-Deviation-Calculator
-A calculator that computes mean, variance, standard deviation, min, max, and sum for a 3×3 matrix, created as part of the FreeCodeCamp - Data Analysis with Python certification.
+# 📊 Page-View-Time-Series-Visualizer
+A Python program that visualizes daily freeCodeCamp forum page views using line, bar, and box plots. The project cleans the data, handles outliers, and creates insightful visualizations to explore trends and seasonality.
 ## ✨ Features
-- Calculates statistics for:
-  - Each row
-  - Each column
-  - The entire matrix
-- Built with clean modular code.
-- Includes input validation and error handling.
-- Compatible with FreeCodeCamp’s automated test suite.
+- Cleans page view data by removing outliers (top/bottom 2.5%).
+- Draws a line plot to visualize daily page views over time.
+- Draws a bar plot showing average monthly page views per year.
+- Draws box plots for yearly and monthly distributions (trend and seasonality).
+- Saves all plots as PNG images.
 ## 📋 Prerequisites
 Before running this project, ensure you have:
 - Python 3.8+
-- NumPy
-- A basic understanding of Python lists and matrices
+- Pandas, NumPy, Matplotlib, Seaborn libraries
+- CSV dataset fcc-forum-pageviews.csv inside a data folder
+- Basic knowledge of Python and data visualization
 ## 🚀 Getting Started
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/Mean-Variance-Standard-Deviation-Calculator.git
-cd Mean-Variance-Standard-Deviation-Calculator
+git clone https://github.com/your-username/fcc-forum-pageview-visualizer.git
+cd fcc-forum-pageview-visualizer
 ```
 2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-3. Run the project:
+3. Run the visualization scripts:
 ```bash
 python main.py
 ```
@@ -33,52 +30,43 @@ python main.py
 (Coming Soon...)
 ## 🗂️ Project Structure
 ```
-📁 Mean-Variance-Standard-Deviation-Calculator
-├── main.py             # Entry script (if exists)
-├── mean_var_std.py     # Core calculations
-├── test_module.py      # FCC test script
+📁 fcc-forum-pageview-visualizer
+├── time_series_visualizer.py
+├── test_module.py            
+├── main.py             
+├── data/
+│   └── fcc-forum-pageviews.csv    # Dataset
 ├── requirements.txt
 └── README.md
+
 
 ```
 ## 🛠️ Usage
 Example usage inside Python:
 ```python
-from mean_var_std import calculate
+from time_series_visualizer import draw_line_plot, draw_bar_plot, draw_box_plot
 
-result = calculate([0,1,2,3,4,5,6,7,8])
-print(result)
+line_fig = draw_line_plot()
+bar_fig = draw_bar_plot()
+box_fig = draw_box_plot()
+
 
 ```
 Expected output:
-```python
-{
- 'mean': [
-   [3.0, 4.0, 5.0],
-   [1.0, 4.0, 7.0],
-   4.0
- ],
- 'variance': [...],
- 'standard deviation': [...],
- 'max': [...],
- 'min': [...],
- 'sum': [...]
-}
-
-
-```
+- line_plot.png → Daily page views over time
+- bar_plot.png → Average monthly page views per year
+- box_plot.png → Year-wise and month-wise box plots
 ## ✅ Tests
 Run the FreeCodeCamp test suite:
 ```bash
 python test_module.py
 ```
 ## 🧠 How It Works
-1. The input list is reshaped into a 3×3 NumPy matrix.
-2. Statistical metrics are computed across:
-   - Columns (axis=0)
-   - Rows (axis=1)
-   - The entire matrix
-3. Results are returned in a Python dictionary.
+1. Reads the CSV dataset using Pandas.
+2. Filters outliers (values below 2.5th percentile and above 97.5th percentile).
+3. Creates three types of visualizations: line, bar, and box plots.
+4. Saves each plot as a PNG image.
+5. Provides insights on trends, seasonality, and distribution of page views.
 
 ## 🤝 Contributing
 Contributions are welcome!
