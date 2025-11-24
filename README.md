@@ -27,7 +27,24 @@ pip install -r requirements.txt
 python main.py
 ```
 ## 🎬 Screenshots / Demo
-(Coming Soon...)
+### Line Plot
+**Figure:**  
+![Line Plot](https://github.com/radwanhefny/Page-View-Time-Series-Visualizer/blob/main/examples/Figure_1.png)  
+**Result:**  
+![Line Plot Result](https://github.com/radwanhefny/Page-View-Time-Series-Visualizer/blob/main/examples/Result_1.png)
+
+### Bar Plot
+**Figure:**  
+![Bar Plot](https://github.com/radwanhefny/Page-View-Time-Series-Visualizer/blob/main/examples/Figure_2.png)  
+**Result:**  
+![Bar Plot Result](https://github.com/radwanhefny/Page-View-Time-Series-Visualizer/blob/main/examples/Result_2.png)
+
+### Box Plot
+**Figure:**  
+![Box Plot](https://github.com/radwanhefny/Page-View-Time-Series-Visualizer/blob/main/examples/Figure_3.png)  
+**Result:**  
+![Box Plot Result](https://github.com/radwanhefny/Page-View-Time-Series-Visualizer/blob/main/examples/Result_3.png)
+
 ## 🗂️ Project Structure
 ```
 📁 fcc-forum-pageview-visualizer
