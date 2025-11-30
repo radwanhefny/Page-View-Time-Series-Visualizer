@@ -15,7 +15,7 @@ Before running this project, ensure you have:
 ## 🚀 Getting Started
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/fcc-forum-pageview-visualizer.git
+git clone https://github.com/radwanhefny/fcc-forum-pageview-visualizer.git
 cd fcc-forum-pageview-visualizer
 ```
 2. Install dependencies:
